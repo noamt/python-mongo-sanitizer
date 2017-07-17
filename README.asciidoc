@@ -1,0 +1,18 @@
+= Python Mongo Sanitizer =
+
+== A component that sanitizes MongoDB queries against injection attacks Edit ==
+
+=== Installation ===
+
+TBD
+
+=== Usage ===
+
+[source,python]
+----
+from mongosanitizer.sanitizer import sanitize
+
+query = {'$bob': 'alice'}
+sanitize(query)
+assert '$bob' not in query
+----
