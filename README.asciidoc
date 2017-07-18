@@ -2,6 +2,8 @@
 
 == A component that sanitizes MongoDB queries against injection attacks ==
 
+image:https://travis-ci.org/noamt/python-mongo-sanitizer.svg?branch=master["Build Status", link="https://travis-ci.org/noamt/python-mongo-sanitizer"]
+
 === Installation ===
 
 `pip install mongosanitizer`
