@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='MongoSanitizer',
-    version='0.0.1.dev0',
+    version='0.0.1',
     packages=['mongosanitizer',],
     license='MIT',
     long_description='A component that sanitizes MongoDB queries against injection attacks',
