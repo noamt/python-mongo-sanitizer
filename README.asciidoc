@@ -3,6 +3,7 @@
 == A component that sanitizes MongoDB queries against injection attacks ==
 
 image:https://travis-ci.org/noamt/python-mongo-sanitizer.svg?branch=master["Build Status", link="https://travis-ci.org/noamt/python-mongo-sanitizer"]
+image:https://badge.fury.io/py/MongoSanitizer.svg["PyPI version", link="https://badge.fury.io/py/MongoSanitizer"]
 
 === Installation ===
 
