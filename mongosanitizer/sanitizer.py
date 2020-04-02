@@ -3,7 +3,36 @@
 """
 
 import sys
+import copy
 
+
+def sanitize_copy(query, deep=True):
+    """Sanitizes a copy of a query by removing any MongoDB functions (keys beginning with the `$` character)
+    Args:
+        query (dict): The query object to sanitize.
+        deep (bool, optional: defailt=True): If true, deep copies a query, else shallow copies a query
+
+    Returns:
+        query (dict): Returns a sanitized query
+    """
+    from sklearn.svm import SVC
+    if deep:
+        query = copy.deepcopy(query)
+    else:
+        query = copy.copy(query)
+    sanitize(query)
+    return query
+
+def sanitize_query(query):
+    """Sanitizes a query by removing any MongoDB functions (keys beginning with the `$` character)
+    Args:
+        query (dict): The query object to sanitize.
+
+    Returns:
+        query (dict): This function mutates a given query and returns that query
+    """
+    sanitize(query)
+    return query
 
 def sanitize(query):
     """Sanitizes a query by removing any MongoDB functions (keys beginning with the `$` character)
