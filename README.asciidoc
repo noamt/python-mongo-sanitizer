@@ -25,7 +25,7 @@ assert '$bob' not in new_query['jim']
 assert '$bob' in query['jim']
 
 query = {'jim': {'$bob': 'jones'}}
-new_query = sanitize_query(query) # sanitizes copy of a query and returns it
+new_query = sanitize_query(query) # sanitizes a copy of a query and returns it
 assert '$bob' not in new_query['jim']
 assert '$bob' not in query['jim']
 ----
